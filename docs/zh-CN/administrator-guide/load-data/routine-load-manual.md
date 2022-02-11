@@ -297,6 +297,9 @@ FE 中的 JobScheduler 根据汇报结果，继续生成后续新的 Task，或�
     |4| Yes | Yes | No | 系统会从指定分区的指定offset 处开始消费 |
     |5| Yes | No | Yes | 系统会从指定分区，default offset 指定的位置开始消费 |
     
+ 7. STOP和PAUSE的区别  
+    
+    FE会自动定期清理STOP状态的ROUTINE LOAD，而PAUSE状态的则可以再次被恢复启用。
 ## 相关参数
 
 一些系统配置参数会影响例行导入的使用。
